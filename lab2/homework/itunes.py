@@ -11,8 +11,8 @@ raw_data = conn.read()
 text = raw_data.decode('utf8')
 
 soup = BeautifulSoup(text, "html.parser")
-div = soup.find("div", "section-content")
-ul = div.find("ul")
+section = soup.find("section","section chart-grid")
+ul = section.find("ul")
 
 li_list = ul.find_all("li")
 
