@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask intro</title>
+  </head>
+  <body>
+    <h3>C4E BLOG</h3>
+
+    <!-- jinja2 -->
+
+
+    {% for i in posts %}
+        <h5>{{i.title}}</h5>
+        <br>
+        {{i.content}}
+        <br>
+        <i>
+          By:
+          {% if i.gender == 1 %}
+            Mr {{i.author}}
+          {% endif %}
+            Ms {{i.author}}
+
+            <!-- JINJA2 CONDITIONAL EXPRESSION -->
+        </i>
+
+        <br>
+    {% endfor %}
+
+  </body>
+</html>
